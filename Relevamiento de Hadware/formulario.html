@@ -1,11 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Relevamiento de Hardware</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
 <body>
 
 <header>
-    <h1>Formulario de Relevamiento</h1>
+    <h1>Formulario de Relevamiento Técnico de Hardware</h1>
 </header>
 
 <nav>
-    <a href="index.html">Volver</a>
+    <a href="RelevamientodeHadware.html">Volver al inicio</a>
 </nav>
 
 <main>
@@ -14,30 +22,94 @@
 
 <form action="#" method="POST">
 
-    <label>Nombre del equipo</label><br>
-    <input type="text" name="equipo">
+    <h2>Datos generales del equipo</h2>
+
+    <label for="equipo">Nombre del equipo</label><br>
+    <input type="text" id="equipo" name="equipo">
     <br><br>
 
-    <label>Fecha del relevamiento</label><br>
-    <input type="date" name="fecha">
+    <label for="usuario">Usuario responsable</label><br>
+    <input type="text" id="usuario" name="usuario">
     <br><br>
 
-    <label>Tipo de CPU</label><br>
-    <select name="cpu">
-        <option>Intel i3</option>
-        <option>Intel i5</option>
-        <option>Intel i7</option>
-        <option>AMD Ryzen 3</option>
-        <option>AMD Ryzen 5</option>
+   <label for="sector">Sector / Area</label><br>
+<select id="sector" name="sector">
+    <option>Administracion</option>
+    <option>Laboratorio</option>
+    <option>Direccion</option>
+    <option>Secretaria</option>
+    <option>Mantenimiento</option>
+    <option>Otros</option>
+</select>
+
+<br><br>
+
+<label for="sector_otro">Si selecciono "otros", especificar:</label><br>
+<input type="text" id="sector_otro" name="sector_otro">
+
+    <hr>
+
+    <h2>Hardware del equipo</h2>
+
+    <label for="cpu">Procesador (CPU)</label><br>
+    <input type="text" id="cpu" name="cpu">
+    <br><br>
+
+    <label for="ram">Memoria RAM (GB)</label><br>
+    <input type="number" id="ram" name="ram">
+    <br><br>
+
+    <label for="disco">Almacenamiento</label><br>
+    <input type="text" id="disco" name="disco">
+    <br><br>
+
+    <label for="gpu">Placa de video</label><br>
+    <input type="text" id="gpu" name="gpu">
+    <br><br>
+
+    <label for="fuente">Fuente de poder</label><br>
+    <input type="text" id="fuente" name="fuente">
+    <br><br>
+
+    <label for="monitor">Monitor</label><br>
+    <input type="text" id="monitor" name="monitor">
+
+    <hr>
+
+    <h2>Estado del equipo</h2>
+
+    <label>Estado general</label><br>
+    <select name="estado">
+        <option>Funciona correctamente</option>
+        <option>Rendimiento lento</option>
+        <option>Fallas intermitentes</option>
+        <option>No enciende</option>
     </select>
+
     <br><br>
 
-    <label>Observaciones</label><br>
-    <textarea name="observaciones" rows="5" cols="30"></textarea>
+    <label for="red">Conexion de red</label><br>
+    <select id="red" name="red">
+        <option>Ethernet</option>
+        <option>WiFi</option>
+        <option>Sin conexion</option>
+    </select>
+
     <br><br>
 
-    <button type="submit">Enviar</button>
-    <button type="reset">Borrar</button>
+    <label for="fecha">Fecha del relevamiento</label><br>
+    <input type="date" id="fecha" name="fecha">
+
+    <hr>
+
+    <h2>Observaciones tecnicas</h2>
+
+    <textarea id="obs" name="observaciones" rows="6" cols="60"></textarea>
+
+    <br><br>
+
+    <button type="submit">Guardar relevamiento</button>
+    <button type="reset">Limpiar formulario</button>
 
 </form>
 
@@ -46,9 +118,8 @@
 </main>
 
 <footer>
-    <p>Formulario de ejemplo</p>
+    <p>Sistema de relevamiento tecnico de hardware</p>
 </footer>
 
-    </script>
 </body>
 </html>
